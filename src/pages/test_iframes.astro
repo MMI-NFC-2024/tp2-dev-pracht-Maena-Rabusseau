@@ -1,6 +1,18 @@
 ---
 
+
+import Layout from "../layouts/Layout.astro";
 ---
+
+
+<iframe
+  src="/species/Adelie"
+  name="species-frame"
+  width="100%"
+  onload="resizeIframe(this)">
+</iframe>
+
+<Layout/>
 <nav>
 <a href="/species/Adelie" target="species-frame" >Adelie</a>
 <a href="/species/Gentoo" target="species-frame" >Gentoo</a>
@@ -27,3 +39,6 @@ src="/species/Chinstrap" name="species-frame" onload="resizeIframe(this)"
     iframe.style.height = iframe.contentWindow.document.body.scrollHeight + "px";
   }
 </script>
+
+
+<Layout/>

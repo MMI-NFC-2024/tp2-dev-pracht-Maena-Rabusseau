@@ -10,3 +10,20 @@
 <iframe 
 src="/species/Adelie" name="species-frame" onload="resizeIframe(this)"
 ></iframe>
+
+<iframe 
+src="/species/Gentoo" name="species-frame" onload="resizeIframe(this)"
+></iframe>
+
+<iframe 
+src="/species/Chinstrap" name="species-frame" onload="resizeIframe(this)"
+></iframe>
+
+
+<!-- Script redimensionnement -->
+
+<script>
+  function resizeIframe(iframe) {
+    iframe.style.height = iframe.contentWindow.document.body.scrollHeight + "px";
+  }
+</script>

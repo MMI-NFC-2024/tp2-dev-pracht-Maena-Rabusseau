@@ -5,7 +5,7 @@ import Layout from "../layouts/Layout.astro";
 ---
 
 
-<Layout>
+<Layout/>
 
   <nav>
     
@@ -16,25 +16,24 @@ import Layout from "../layouts/Layout.astro";
 
   
   
-  <iframe
+  <!-- <iframe
     src="/species/Adelie"
     name="species-frame"
     width="100%"
     onload="resizeIframe(this)">
   </iframe>
+   -->
+<script>
+  function resizeIframe(iframe) {
+    const interval = setInterval(() => {
+      const doc = iframe.contentWindow.document;
+      if (doc.body.scrollHeight > 100) { 
+        iframe.style.height = doc.body.scrollHeight + "px";
+        clearInterval(interval);
+      }
+    }, 100); 
+  }
+</script>
 
-  <!-- Script de redimensionnement -->
-  <script>
-    function resizeIframe(iframe) {
-      const newHeight = iframe.contentWindow.document.body.scrollHeight;
-      iframe.style.height = newHeight + "px";
-    }
-  </script>
 
 
-
-
-
-
-
-</Layout>

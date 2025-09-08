@@ -5,40 +5,36 @@ import Layout from "../layouts/Layout.astro";
 ---
 
 
-<iframe
-  src="/species/Adelie"
-  name="species-frame"
-  width="100%"
-  onload="resizeIframe(this)">
-</iframe>
+<Layout>
 
-<Layout/>
-<nav>
-<a href="/species/Adelie" target="species-frame" >Adelie</a>
-<a href="/species/Gentoo" target="species-frame" >Gentoo</a>
-<a href="/species/Chinstrap" target="species-frame" >Chinstrap</a>
-</nav>
+  <nav>
+    
+    <a class="p-5 " href="/species/Adelie" target="species-frame">Adelie</a>
+    <a class="p-5 " href="/species/Gentoo" target="species-frame">Gentoo</a>
+    <a class="p-5 " href="/species/Chinstrap" target="species-frame">Chinstrap</a>
+  </nav>
 
-<iframe 
-src="/species/Adelie" name="species-frame" onload="resizeIframe(this)"
-></iframe>
+  
+  
+  <iframe
+    src="/species/Adelie"
+    name="species-frame"
+    width="100%"
+    onload="resizeIframe(this)">
+  </iframe>
 
-<iframe 
-src="/species/Gentoo" name="species-frame" onload="resizeIframe(this)"
-></iframe>
-
-<iframe 
-src="/species/Chinstrap" name="species-frame" onload="resizeIframe(this)"
-></iframe>
-
-
-<!-- Script redimensionnement -->
-
-<script>
-  function resizeIframe(iframe) {
-    iframe.style.height = iframe.contentWindow.document.body.scrollHeight + "px";
-  }
-</script>
+  <!-- Script de redimensionnement -->
+  <script>
+    function resizeIframe(iframe) {
+      const newHeight = iframe.contentWindow.document.body.scrollHeight;
+      iframe.style.height = newHeight + "px";
+    }
+  </script>
 
 
-<Layout/>
+
+
+
+
+
+</Layout>
